@@ -1,0 +1,27 @@
+ID: TechEd2017.HBD603
+_schema-version: '2.0'
+version: 1.0.2017
+description: TechEd 2017 HBD603 Intro to Native Development with SAP HANA Using SAP Web IDE for SAP HANA Codejam mini-editions
+provider: 'SAP TechEd'
+copyright: 'SAP TechEd'
+modules:
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi-container
+
+resources:
+ - name: hdi-container
+   parameters:
+      config:
+         schema: TECHED2017_HBD603
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: ui5-lib
+   type: configuration
+   parameters:
+     provider-id: 'com.sap.ui5.dist.sapui5-dist-xsa.XSAC_UI5_FESV3:sapui5_fesv3'
+     version: '>=1.44.0'
