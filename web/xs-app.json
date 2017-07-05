@@ -1,0 +1,32 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "none",
+	"websockets": {
+		"enabled": true
+	},
+	"routes": [{
+		"source": "/node(.*)",
+		"destination": "js_api",
+		"authenticationType": "false"
+	}, {
+		"source": "(.*)(.xsjs)",
+		"destination": "js_api",
+		"authenticationType": "false"
+	}, {
+		"source": "(.*)(.xsodata)",
+		"destination": "js_api",
+		"authenticationType": "false"
+	}, {
+		"source": "/(.*)",
+		"localDir": "resources",
+		"authenticationType": "false",
+		"replace": {
+			"pathSuffixes": [
+				"index.html"
+			],
+			"vars": [
+				"ui5liburl"
+			]
+		}
+	}]
+}

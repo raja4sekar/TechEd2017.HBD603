@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@sap/xsjs": "1.14.1",
+    "@sap/xsenv": "1.2.6",
+    "express": "~4.15",  
+    "async": "latest",
+    "ws": "1.1.1"    
+  },
+  "devDependencies": {
+    "@sap/xsjs-test": "2.0.2"
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node testrun.js"
+  },
+  "engines": {
+    "node": "6.x"
+  },
+  "version": "1.0.0"
+}

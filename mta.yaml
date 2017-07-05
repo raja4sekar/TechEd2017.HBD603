@@ -11,6 +11,30 @@ modules:
    requires:
     - name: hdi-container
 
+
+ - name: js
+   type: nodejs
+   path: js
+   provides:
+    - name: js_api
+      properties:
+         url: ${default-url}
+
+
+ - name: web
+   type: html5
+   path: web
+   requires:
+    - name: ui5-lib
+      properties:
+        ui5liburl: '~{url}'      
+    - name: js_api
+      group: destinations
+      properties:
+        name: js_api
+        url: '~{url}'
+        forwardAuthToken: true 
+          
 resources:
  - name: hdi-container
    parameters:
