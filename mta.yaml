@@ -15,7 +15,7 @@ resources:
  - name: hdi-container
    parameters:
       config:
-         schema: TECHED2017_HBD603
+         schema: TECHED2017_HBD603_TEMPLATE
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
