@@ -19,7 +19,8 @@ modules:
     - name: js_api
       properties:
          url: ${default-url}
-
+   requires:
+    - name: hdi-container
 
  - name: web
    type: html5

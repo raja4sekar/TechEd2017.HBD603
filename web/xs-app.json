@@ -7,19 +7,19 @@
 	"routes": [{
 		"source": "/node(.*)",
 		"destination": "js_api",
-		"authenticationType": "false"
+		"authenticationType": "none"
 	}, {
 		"source": "(.*)(.xsjs)",
 		"destination": "js_api",
-		"authenticationType": "false"
+		"authenticationType": "none"
 	}, {
 		"source": "(.*)(.xsodata)",
 		"destination": "js_api",
-		"authenticationType": "false"
+		"authenticationType": "none"
 	}, {
 		"source": "/(.*)",
 		"localDir": "resources",
-		"authenticationType": "false",
+		"authenticationType": "none",
 		"replace": {
 			"pathSuffixes": [
 				"index.html"
